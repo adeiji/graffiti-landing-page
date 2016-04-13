@@ -69,6 +69,50 @@ $(function () {
         }]
     });
 
+    /* ==========================================================================
+   sub form
+   ========================================================================== */
+
+    var $form = $('#mc-form');
+    
+    $('#mc-subscribe').on('click', function(event) {
+        if (event)
+            event.preventDefault();
+        register($form);
+    });
+    
+    function register($form) {
+
+        var formContent = $form.serialize();
+        var fieldName = formContent.substring(0, formContent.indexOf('='));
+        var fieldValue = formContent.substring(formContent.indexOf('=') + 1, formContent.length);
+        fieldValue = fieldValue.replace('%40', '@');
+
+        $.ajax({
+            type: $form.attr('method'),
+            url: $form.attr('action'),
+            data: JSON.stringify({ fieldName : fieldValue }),
+            cache: false,
+            dataType: 'json',
+            contentType: "application/json; charset=utf-8",
+            error: function(err) {
+                $('#mc-notification').hide().html('<span class="alert">Could not connect to server. Please try again later.</span>').fadeIn("slow");
+            
+            },
+            success: function(data) {
+                
+                if (data.status != "200") {
+                    var message = data.message;
+                    $('#mc-notification').hide().html('<span class="alert"><i class="fa fa-exclamation-triangle"></i>' + message + '</span>').fadeIn("slow");
+                
+                } else {
+                    var message = data.message;
+                    $('#mc-notification').hide().html('<span class="success"><i class="fa fa-envelope"></i>' + 'Awesome! We sent you a confirmation email.' + '</span>').fadeIn("slow");
+                
+                }
+            }
+        });
+    }
 
     /* ==========================================================================
    ScrollTop Button
