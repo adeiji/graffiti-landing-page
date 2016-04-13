@@ -22,13 +22,13 @@
 
 <!--Main Header-->
 <header class="main-header" id="home">
-  <div class="overlay"></div>
+  <div class="overlay" style="background-color: rgba(0, 0, 0, .7)"></div>
   <div class="container">
     <div class="row">
       <div class="col-md-11 col-md-offset-1"> 
         
         <!--logo-->
-        <div class="logo"> <a href=""><img src="img/logo.png" alt="cloud"></a></div>
+        <!-- <div class="logo"> <img src="img/graffitilogo.jpg" alt="cloud" height="100" width="100" style="border-radius: 10px;"></div> -->
         <!--logo end--> 
         
       </div>
@@ -38,8 +38,9 @@
         <div class="head-hero"> 
           <!--welcome message-->
           
-          <h1 class="slideInDown animated">We are <span class="highlight">Launching</span> soon</h1>
-          
+          <h1 class="slideInDown animated"><span class="highlight"><span style="color: #008AD8; font-size: 110px;">G</span>raffiti</span></h1>
+          <h1>"Go Paint the World"</h1>
+          <h4 style="color: white;">Become a Beta Tester and Post Within the App For Free Forever</h4>
           <!--welcome message end--> 
           
           <!--Subscription Form-->
@@ -47,11 +48,11 @@
             
             <!--sub-form-->
             <div class="slide-left slideInLeft animated sub-form" data-plugin-options='{"reverse":true}'>
-              <form role="form" id="mc-form" action="http://localhost:8080/sendEmail">
+              <form role="form" method="post" id="mc-form" action="http://localhost:8080/sendEmail">
                 <div class="input-group">
                   <input type="email" class="form-control" placeholder="Email Address" required value="" name="EMAIL">
                   <span class="input-group-btn">
-                  <button type="submit" class="btn btn-default button" id="mc-subscribe" value="Subscribe" name="subscribe">Request Invite</button>
+                  <button type="submit" class="btn btn-default button" id="mc-subscribe" value="Subscribe" name="subscribe">Become a Beta Tester</button>
                   </span> </div>
               </form>
               <p id="mc-notification"></p>
@@ -62,18 +63,16 @@
           <!--Subscription Form end--> 
           
         </div>
-      </div>
-      <div class="col-md-5 col-md-offset-1 visible-md visible-lg over-hide"> <img src="img/iphone.png" alt="App Image" class="slide-right slideInRight animated hero-img" data-plugin-options='{"reverse":true, "offset":-100}'> </div>
+      </div>      
     </div>
     <div class="row">
       <div class="col-md-12"> 
         
         <!--social-->
         
-        <ul class="social text-center">
-          <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+        <ul class="social text-center" style="padding-top: 20px;">
+          <li><a href="https://twitter.com/dephyned" target="_blank"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="https://www.facebook.com/Graffiti-App-1285641514798601/?ref=aymt_homepage_panel" target="_blank"><i class="fa fa-facebook"></i></a></li>
         </ul>
         
         <!--social end--> 
@@ -116,29 +115,31 @@
               <div class="slide-left app-features row">
                 <div class="col-md-3 col-md-offset-1 col-sm-3 col-xs-3 text-center"><img src="img/icon-1.png" alt="App Features"></div>
                 <div class="col-md-8 col-sm-9 col-xs-9">
-                  <h4>Lorem Lpsum</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, beatae, esse, aspernatur, alias odio numquam incidunt perspiciatis aliquid voluptate sapiente magnam eum blanditiis.</p>
+                  <h4>Leave Your Mark</h4>
+                  <p>Post media to a specific location and whenever a user passes that specific location they will be able to see your media.  This app is unique because everyone you decide to can see the media you've posted at a location forever!</p>
+                  <p>Want everyone to know that you were the first person to accomplish something at that one place.  Well tag it and let the world know!</p>
                 </div>
               </div>
               <div class="slide-left app-features row">
                 <div class="col-md-3 col-md-offset-1 col-sm-3 col-xs-3 text-center"><img src="img/icon-2.png" alt="App Features"></div>
                 <div class="col-md-8 col-sm-9 col-xs-9">
-                  <h4>Lorem Lpsum</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, beatae, esse, aspernatur, alias odio numquam incidunt perspiciatis aliquid voluptate sapiente magnam eum blanditiis.</p>
+                  <h4>Advertise</h4>
+                  <p>Allow everyone within feet or miles to see media that you have posted.  Great way to advertise to many people all at one time.</p>
+                  <p>Want a ton of people to hear your newest song, well post it at a high volume location.</p>
                 </div>
               </div>
               <div class="slide-left app-features row">
                 <div class="col-md-3 col-md-offset-1 col-sm-3 col-xs-3 text-center"><img src="img/icon-3.png" alt="App Features"></div>
                 <div class="col-md-8 col-sm-9 col-xs-9">
-                  <h4>Lorem Lpsum</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, beatae, esse, aspernatur, alias odio numquam incidunt perspiciatis aliquid voluptate sapiente magnam eum blanditiis.</p>
+                  <h4>Interact With Friends</h4>
+                  <p>Connect with friends through the app and share your awesome media.  Leave little teasers for your friends so that they have to visit the location in order to view the media.  Great way to communicate, and have fun doing it.</p>
+                  <p>Want your girlfriend or boyfriend to read a poem at the place where you guys met?  Well create a poem at that location and send it off to them.</p>
                 </div>
               </div>
             </div>
             <!--app features container end--> 
             
-          </div>
-          <div class="col-md-5 text-center"> <img src="img/feature-1.png" alt="App Feature img" class="slide-right"> </div>
+          </div>        
         </div>
       </div>
       
@@ -175,8 +176,7 @@
             </div>
             <!--app features container end--> 
             
-          </div>
-          <div class="col-md-5 text-center"> <img src="img/feature-2.png" alt="App Feature img"> </div>
+          </div>        
         </div>
       </div>
       
@@ -188,166 +188,7 @@
   </div>
 </section>
 
-<!--Features end--> 
 
-<!--team-->
-
-<section class="team text-center section-spacing" id="team">
-  <div class="container">
-    <h2>Meet The Team</h2>
-    <div class="row">
-      <div class="team-slider"> 
-        
-        <!--team-->
-        
-        <div class="slide-left">
-          <h3>Michael Doe</h3>
-          <figure class="team-details"> <img src="img/team-img/team-1.jpg" alt="team">
-            <figcaption>
-              <p>Programmer</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, ratione minus suscipit eveniet impedit accusantium temporibus.</p>
-            </figcaption>
-          </figure>
-          <!--social-->
-          
-          <ul class="social">
-            <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-          </ul>
-          
-          <!--social end--> 
-        </div>
-        
-        <!--team end--> 
-        
-        <!--team-->
-        
-        <div class="slide-top">
-          <h3>Jasmine Doe</h3>
-          <figure class="team-details"> <img src="img/team-img/team-2.jpg" alt="team">
-            <figcaption>
-              <p>Designer</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, ratione minus suscipit eveniet impedit accusantium temporibus.</p>
-            </figcaption>
-          </figure>
-          <!--social-->
-          
-          <ul class="social">
-            <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-          </ul>
-          
-          <!--social end--> 
-        </div>
-        
-        <!--team end--> 
-        
-        <!--team-->
-        
-        <div class="slide-right">
-          <h3>Jessica Doe</h3>
-          <figure class="team-details"> <img src="img/team-img/team-3.jpg" alt="team">
-            <figcaption>
-              <p>Manager</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, ratione minus suscipit eveniet impedit accusantium temporibus.</p>
-            </figcaption>
-          </figure>
-          <!--social-->
-          
-          <ul class="social">
-            <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-          </ul>
-          
-          <!--social end--> 
-        </div>
-        
-        <!--team end--> 
-        
-        <!--team-->
-        
-        <div>
-          <h3>James</h3>
-          <figure class="team-details"> <img src="img/team-img/team-4.jpg" alt="team">
-            <figcaption>
-              <p>Illustrator</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, ratione minus suscipit eveniet impedit accusantium temporibus.</p>
-            </figcaption>
-          </figure>
-          <!--social-->
-          
-          <ul class="social">
-            <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-          </ul>
-          
-          <!--social end--> 
-        </div>
-        
-        <!--team end--> 
-        
-        <!--team-->
-        
-        <div>
-          <h3>Juliet Doe</h3>
-          <figure class="team-details"> <img src="img/team-img/team-5.jpg" alt="team">
-            <figcaption>
-              <p>Illustrator</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, ratione minus suscipit eveniet impedit accusantium temporibus.</p>
-            </figcaption>
-          </figure>
-          <!--social-->
-          
-          <ul class="social">
-            <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-          </ul>
-          
-          <!--social end--> 
-        </div>
-        
-        <!--team end--> 
-        
-      </div>
-    </div>
-  </div>
-</section>
-
-<!--team end--> 
-
-<!-- contact-->
-<section class="contact section-spacing" id="contact">
-  <h2 class="text-center">Contact Us</h2>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 center-block"> 
-        
-        <!--Contact form-->
-        <div id="form-messages"></div>
-        <form class="slide-right contact-form text-center" method="post" action="php/process.php" role="form" id="ajax-contact">
-          <div class="form-group">
-            <input class="form-control" type="text" name="name" id="name" placeholder="Full Name" required>
-          </div>
-          <div class="form-group">
-            <input type="email" name="email" class="form-control" id="email" placeholder="Email" required>
-          </div>
-          <div class="form-group">
-            <textarea name="message" class="form-control" id="message"  rows="4" placeholder="Message" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-default button">Submit</button>
-        </form>
-        <!--Contact form end--> 
-        
-      </div>
-    </div>
-  </div>
-</section>
-<!-- contact end--> 
 
 <!--site-footer-->
 <footer class="site-footer section-spacing">
@@ -359,9 +200,8 @@
         <!--social-->
         
         <ul class="social">
-          <li class="slide-left"><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
-          <li class="slide-top"><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-          <li class="slide-right"><a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+          <li class="slide-left"><a href="https://twitter.com/dephyned" target="_blank"><i class="fa fa-twitter"></i></a></li>
+          <li class="slide-top"><a href="https://www.facebook.com/Graffiti-App-1285641514798601/?ref=aymt_homepage_panel" target="_blank"><i class="fa fa-facebook"></i></a></li>          
         </ul>
         
         <!--social end--> 

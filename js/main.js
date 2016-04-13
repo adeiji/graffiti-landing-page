@@ -69,45 +69,6 @@ $(function () {
         }]
     });
 
-    /* ==========================================================================
-   sub form
-   ========================================================================== */
-
-    var $form = $('#mc-form');
-    
-    $('#mc-subscribe').on('click', function(event) {
-        if (event)
-            event.preventDefault();
-        register($form);
-    });
-    
-    function register($form) {
-        $.ajax({
-            type: $form.attr('method'),
-            url: $form.attr('action'),
-            data: $form.serialize(),
-            cache: false,
-            dataType: 'json',
-            contentType: "application/json; charset=utf-8",
-            error: function(err) {
-                $('#mc-notification').hide().html('<span class="alert">Could not connect to server. Please try again later.</span>').fadeIn("slow");
-            
-            },
-            success: function(data) {
-                
-                if (data.result != "success") {
-                    var message = data.msg.substring(4);
-                    $('#mc-notification').hide().html('<span class="alert"><i class="fa fa-exclamation-triangle"></i>' + message + '</span>').fadeIn("slow");
-                
-                } else {
-                    var message = data.msg.substring(4);
-                    $('#mc-notification').hide().html('<span class="success"><i class="fa fa-envelope"></i>' + 'Awesome! We sent you a confirmation email.' + '</span>').fadeIn("slow");
-                
-                }
-            }
-        });
-    }
-
 
     /* ==========================================================================
    ScrollTop Button
@@ -148,60 +109,7 @@ $(function () {
         }
     });
 
-    /* ==========================================================================
-   Contact Form
-   ========================================================================== */
-
-
-    var form = $('#ajax-contact');
-
-
-    var formMessages = $('#form-messages');
-
-
-    $(form).submit(function (event) {
-
-        event.preventDefault();
-
-
-        var formData = $(form).serialize();
-
-
-
-
-        $.ajax({
-            type: 'POST',
-            url: $(form).attr('action'),
-            data: formData
-        }).done(function (response) {
-
-            $(formMessages).removeClass('error');
-            $(formMessages).addClass('success');
-
-
-            $(formMessages).hide().text(response).slideDown();
-
-
-            $('#name').val('');
-            $('#email').val('');
-            $('#message').val('');
-        }).fail(function (data) {
-
-            $(formMessages).removeClass('success');
-            $(formMessages).addClass('error');
-
-
-            if (data.responseText !== '') {
-                $(formMessages).text(data.responseText);
-            } else {
-                $(formMessages).hide().text('Oops! An error occured and your message could not be sent.').slideDown();
-            }
-        });
-
-
-
-
-    });
+   
 
 
 });
